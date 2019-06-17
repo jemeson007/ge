@@ -1,0 +1,68 @@
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+
+			<h1>Haven</h1>		
+			<div class="faal">
+
+				
+			<%= form_with model: @property, local: true, html: {multipart: true} do |form| %>
+
+			<% if @property.errors.any? %>
+				<div id="alert alert-danger">
+				  <h2>
+				    <%= pluralize(@property.errors.count, "error") %> prohibited this article from being saved.
+				  </h2>
+				  <ul>
+				     <% @property.errors.full_messages.each do |msg| %>
+				       <li><%= msg %></li>
+				       <%  end %>
+				  </ul>
+			    </div>
+			<% end %>
+
+			<p>
+				<div class="form-group">
+				<%= form.label :visual, class: "control-label" %>
+				<%= form.file_field :visual, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+				<%= form.label :name, class: "control-label" %>
+				<%= form.text_field :name, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :place, class: "control-label" %>
+					<%= form.text_area :place, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :price, class: "control-label" %>
+					<%= form.number_field :price, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :Views, class: "control-label" %>
+					<%= form.file_field :piece, multiple: true, class: "form-control" %>	
+				</div>
+			</p>
+
+
+			<p>
+				<div class="form-group">
+					<%= form.submit "Placement", class: "btn btn-primary" %>	
+				</div>
+			</p>
+
+			<% end %> 
+			</div>
+	</div>
+</div>

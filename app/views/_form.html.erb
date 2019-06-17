@@ -1,0 +1,49 @@
+<%= form_with model: @cheese, local: true do |form| %>
+
+<% if @cheese.errors.any? %>
+	<div id="error_explanation">
+	  <h2>
+	    <%= pluralize(@cheese.errors.count, "error") %> prohibited this article from being saved.
+	  </h2>
+	  <ul>
+	     <% @cheese.errors.full_messages.each do |msg| %>
+	       <li><%= msg %></li>
+	       <%  end %>
+	  </ul>
+    </div>
+<% end %>
+<p>
+	<%= form.label :first_name %>
+	<%= form.text_field :first_name %>
+</p>
+
+<p>
+	<%= form.label :last_name %>
+	<%= form.text_field :last_name %>
+</p>
+
+<p>
+<%= form.label :card_number %>
+<%= form.text_field :credit_card_number %>
+</p>
+
+<p>
+<%= form.label :CVV %>
+<%= form.number_field :card_security_code %>
+</p>
+
+<p>
+<%= form.label :expiration_month %>
+<%= form.date_field :expiration_month %>
+<p>
+
+<p>
+	<%= form.label :amount %>
+	<%= form.number_field :amount %>
+</p>
+
+<p>
+	<%= form.submit "Do Charge" %>
+</p>
+
+<% end %>

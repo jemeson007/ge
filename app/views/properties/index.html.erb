@@ -1,0 +1,38 @@
+<h1> Property Listing  </h1>
+<p class="navbar-text pull-left">
+<%= link_to 'Home', welcome_index_path %>  <br>
+<%= link_to 'Add Property', new_property_path %>
+
+</p>
+<table class="table table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Place</th>
+    
+    <!-- <th>Price</th> -->
+    <th>Price Point (₦)</th>
+    <th colspan = "3"></th>
+  </tr>
+
+  <%= @properties.each do |property| %>
+    <tr>
+    
+      <td><%= property.name %></td>
+      <td><%= property.place %></td>
+      
+      <td><%= property.spend = property.price * 10/7 %></td>
+      <td><%= link_to 'Show', property_path(property) %></td>
+        <td><%= link_to "Procure", "http://www.paystack.com/realest", :target => "_blank" %></td>  
+      <!-- <td><%= link_to 'Procure', new_cheese_path %></td> -->
+      <% if property.person == current_person %>
+        
+      	<td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Take Off the Market', property_path(property), method: :delete, data: {confirm: 'Are you Certain?'} %></td>
+      	
+      <% end %>
+      
+    </tr>
+  <% end %>
+
+ 
+</table>

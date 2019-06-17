@@ -1,0 +1,58 @@
+<p><div class="row">
+
+  <div class="col-md-4">
+    <strong>House View -</strong>
+  </div>
+   <div class="col-md-8">
+     <%= image_tag @property.visual%>
+   </div> 
+  </div>
+</p>
+
+<p><div class="row">
+   <div class="col-md-4">
+     <strong>Name -</strong>
+   </div>
+   <div class="col-md-8">
+     <%= @property.name %>
+   </div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Place -<strong>
+    </div>
+      <div class="col-md-8">
+        <%= @property.place %>
+      </div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>MultiView -<strong>
+    </div>
+     <div class="col-md-8">
+       <% @property.piece.each do |u| %>
+         <%= image_tag u %>
+        <% end %>
+     </div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Price -<strong>
+    </div>
+    <div class="col-md-8">
+      <%= @property.price %>
+    </div>
+  </div>
+</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= link_to 'Back', properties_path %>
+  </div>
+</div>

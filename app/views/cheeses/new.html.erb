@@ -1,0 +1,82 @@
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<h1>New Payment</h1>
+
+		<div class="fell">
+
+			<%= form_with model: @cheese, local: true  do |form| %>
+
+			<% if @cheese.errors.any? %>
+				<div id="alert alert-danger">
+				  <h2>
+				    <%= pluralize(@cheese.errors.count, "error") %> prohibited this article from being saved.
+				  </h2>
+				  <ul>
+				     <% @cheese.errors.full_messages.each do |msg| %>
+				       <li><%= msg %></li>
+				       <%  end %>
+				  </ul>
+			    </div>
+			<% end %>
+			<p><div class="form-group">
+				<%= form.label :first_name, class: "control-label" %>
+				<%= form.text_field :first_name, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+				<%= form.label :last_name, class: "control-label" %>
+				<%= form.text_field :last_name, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :card_number,  class: "control-label" %>
+					<%= form.text_field :credit_card_number, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :CVV, class: "control-label" %>
+					<%= form.text_field :card_security_code, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :expiration_month, class: "control-label" %>
+					<%= form.select :expiration_month, months, {}, class: "form-control" %>
+				</div>
+			
+			<p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :expiration_year, class: "control-label" %>
+					<%= form.select :expiration_year, years, {}, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+		
+				<div class="form-group">
+					<%= form.label :amount, class: "control-label" %>
+					<%= form.number_field :amount, class:  "form-control", step: "0.01" %>
+				</div>
+			</p>
+
+
+			<p>
+				<div class="form-group">
+					<%= form.submit "Do Charge", class: "btn btn-primary" %>
+				</div>
+			</p>
+
+			<% end %>
+			
+		</div>
+	</div>
+</div>
