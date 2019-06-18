@@ -60,12 +60,12 @@ class PropertiesController < ApplicationController
 		
 	# end
 
-	def upload
-		uploaded_io = params[:property][:view]
-		File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), "wb") do |file|  
-			file.write(uploaded_io.read)
-		end
-	end
+	# def upload
+	# 	uploaded_io = params[:property][:view]
+	# 	File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), "wb") do |file|  
+	# 		file.write(uploaded_io.read)
+	# 	end
+	# end
 
 
 end

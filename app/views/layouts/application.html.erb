@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
-      <h3>
+      <h4>
         <p class="navbar-text pull-right">
         <% if person_signed_in? %>
           <strong><%= current_person.email %></strong>.
@@ -20,7 +20,7 @@
           <%= link_to "Login", new_person_session_path, :class => 'navbar-link'  %>
         <% end %>
         </p>
-      </h3>
+      </h4>
   </head>
 <body>
 
