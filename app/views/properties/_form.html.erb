@@ -43,6 +43,13 @@
 
 			<p>
 				<div class="form-group">
+					<%= form.label :Description, class: "control-label" %>
+					<%= form.text_area :Description, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
 					<%= form.label :price, class: "control-label" %>
 					<%= form.number_field :price, class: "form-control" %>
 				</div>
