@@ -7,4 +7,10 @@ class Person < ApplicationRecord
 
   has_many :properties
   has_many :cheeses         
+
+  def userN 
+  	return email.split("@")[0].capitalize
+  end
+
+  
 end
