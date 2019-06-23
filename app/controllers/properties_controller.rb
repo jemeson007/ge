@@ -51,7 +51,7 @@ class PropertiesController < ApplicationController
 
 	def property_params
 		# params[:spend] = 10/7 * params[:price]
-		params.require(:property).permit(:name, :place, :Description, :visual, :price, :spend, :accountNumber, piece: [])
+		params.require(:property).permit(:name, :place, :Description, :visual, :currency, :price, :spend, :accountNumber, piece: [])
 		# :spend = :price * 10/7
 	end
 

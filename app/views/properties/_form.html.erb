@@ -51,6 +51,13 @@
 			<p>
 				<div class="form-group">
 					<%= form.label :price, class: "control-label" %>
+					
+					<%= form.radio_button :currency, :₦ %>
+					<%= form.label :currency_NGN, "₦" %>
+					<%= form.radio_button :currency, :USD %>
+					<%= form.label :currency_USD, "$" %>
+					<%= form.radio_button :currency, :£ %>
+					<%= form.label :currency_GBP, "£" %>
 					<%= form.number_field :price, class: "form-control" %>
 				</div>
 			</p>
