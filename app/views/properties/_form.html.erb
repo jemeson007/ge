@@ -43,22 +43,36 @@
 
 			<p>
 				<div class="form-group">
-					<%= form.label :Description, class: "control-label" %>
-					<%= form.text_area :Description, class: "form-control" %>
+					<%= form.radio_button :purchaseOrder, :RentperAnnum, class: "form-control" %>
+					<%= form.label :purchaseOrder_Lease, "Lease", class: "control-label" %><br>
+					<%= form.radio_button :purchaseOrder, :Sale, class: "form-control" %>
+					<%= form.label :purchaseOrder_Sale, "Sale", class: "control-label" %>
 				</div>
 			</p>
 
 			<p>
 				<div class="form-group">
+					<%= form.label :Description, class: "control-label" %>
+					<%= form.text_area :Description, class: "form-control" %>
+				</div>
+			</p>
+
+			
+
+			<p>
+				<div class="form-group">
 					<%= form.label :price, class: "control-label" %>
 					
-					<%= form.radio_button :currency, :₦ %>
-					<%= form.label :currency_NGN, "₦" %>
-					<%= form.radio_button :currency, :USD %>
-					<%= form.label :currency_USD, "$" %>
-					<%= form.radio_button :currency, :£ %>
-					<%= form.label :currency_GBP, "£" %>
+					<%= form.radio_button :currency, :₦, class: "form-control" %>
+					<%= form.label :currency_NGN, "₦", class: "control-label" %>
+					<%= form.radio_button :currency, :USD, class: "form-control" %>
+					<%= form.label :currency_USD, "$", class: "control-label" %>
+					<%= form.radio_button :currency, :£, class: "form-control" %>
+					<%= form.label :currency_GBP, "£", class: "control-label" %>
+					<%= form.radio_button :currency, :€, class: "form-control" %>
+					<%= form.label :currency_EURO, "€", class: "control-label" %>
 					<%= form.number_field :price, class: "form-control" %>
+
 				</div>
 			</p>
 

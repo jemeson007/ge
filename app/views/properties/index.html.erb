@@ -8,6 +8,7 @@
   <tr>
     <th>Name</th>
     <th>Place</th>
+    <th>Purchase Order</th>
     <th>Description</th>
     <th>Photo</th>
     <th>Price Point</th>
@@ -19,12 +20,13 @@
     
       <td><%= property.name %></td>
       <td><%= property.place %></td>
+      <td><%= property.purchaseOrder %></td>
       <td><%= property.Description %></td>
       <td><%= image_tag property.visual %></td>
       <%= property.spend = property.price * 10/7 %>
       <td><%= property.currency %><%= property.spend.round(2)%></td>
       <td><%= link_to 'Show', property_path(property) %></td>
-        <td><%= link_to "Procure", "http://www.paystack.com/realest", :target => "_blank" %></td>  
+        <td><%= link_to "Procure", "https://www.paystack.com/pay/realest", :target => "_blank" %></td>  
       
       <% if property.person == current_person %>
         
