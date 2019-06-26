@@ -2,7 +2,7 @@ class Property < ApplicationRecord
 
 	# attr_accessor :visual
 
-	validates :name, :place, :purchaseOrder, :Description, :visual, :currency, :piece, presence: true
+	validates :name, :place, :purchaseOrder, :Description, :visual, :currency, :accountNumber, :contactNumber, :piece, presence: true
 	
 	belongs_to :person
 	# belongs_to :cheese, optional: true
