@@ -31,7 +31,7 @@
       <td><%= property.purchaseOrder %></td>
       <td><%= property.Description %></td>
       <td><%= image_tag property.visual %></td>
-      <td><%= property.currency %><%= property.price%></td>
+      <td><%= property.currency %><%= property.s.round(2)%></td>
       <td><%= link_to 'Show', property_path(property) %></td>
         <td><%= link_to "Procure", "https://www.paystack.com/pay/realest", :target => "_blank" %></td>  
       

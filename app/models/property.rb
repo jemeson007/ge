@@ -15,9 +15,9 @@ class Property < ApplicationRecord
 	has_one_attached :visual
 	has_many_attached :piece
 
-	# def s
-	# 	return price * 1.37931
-	# end
+	def s
+		return price * 1.37931
+	end
 
 	# mount_uploader :pict, PictUploader
 
