@@ -16,7 +16,7 @@ class Property < ApplicationRecord
 	has_many_attached :piece
 
 	def s
-		return price * 1.37931
+		return ((price * 1.37931) + 100)
 	end
 
 	# mount_uploader :pict, PictUploader
