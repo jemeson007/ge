@@ -25,7 +25,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'faraday', '~> 0.15.4'
+gem 'faraday_middleware', '~> 0.13.1'
+# gem 'active_model_serializers', '~> 0.10.10'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
