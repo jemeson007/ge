@@ -1,5 +1,7 @@
 class Property < ApplicationRecord
 
+	ur = "https://www.paystack.com/pay/realest"
+
 	# attr_accessor :visual
 
 	validates :name, :place, :purchaseOrder, :Description, :visual, :currency, :accountNumber, :contactNumber, :piece, presence: true
@@ -18,6 +20,8 @@ class Property < ApplicationRecord
 	def s
 		return ((price * 1.37931) + 100)
 	end
+
+
 
 	# mount_uploader :pict, PictUploader
 
