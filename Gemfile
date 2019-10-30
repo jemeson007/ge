@@ -56,7 +56,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 
 gem 'iso8583', '~> 0.2.3'
 
