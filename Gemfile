@@ -64,7 +64,7 @@ gem 'activemerchant', '~> 1.95'
 
 gem 'paperclip', '~> 6.1'
 
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
